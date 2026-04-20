@@ -21,7 +21,7 @@ public class UserSerie {
     }
 
     @Column(name = "date_watched", nullable = false)
-    private LocalDate date_watched;
+    private LocalDate dateWatched;
 
     @Column(name = "rating", nullable = false)
     private Integer rating;
@@ -34,12 +34,20 @@ public class UserSerie {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    public LocalDate getDate_watched() {
-        return date_watched;
+    public UserSerie(User user, Serie serie) {
+        this.serie = serie;
+        this.user = user;
     }
 
-    public void setDate_watched(LocalDate date_watched) {
-        this.date_watched = date_watched;
+    public UserSerie() {
+    }
+
+    public LocalDate getDateWatched() {
+        return dateWatched;
+    }
+
+    public void setDateWatched(LocalDate dateWatched) {
+        this.dateWatched = dateWatched;
     }
 
     public Integer getRating() {

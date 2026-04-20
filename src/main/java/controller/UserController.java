@@ -16,13 +16,9 @@ public class UserController {
 
     public void createUser() {
         String username;
-        String password;
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter your username");
         username = sc.nextLine();
-
-        System.out.println("Enter a valid password");
-        password = sc.nextLine();
     }
 }

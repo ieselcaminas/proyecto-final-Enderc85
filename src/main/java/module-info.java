@@ -12,6 +12,7 @@ module org.example.proyectofinal {
     requires jakarta.transaction;
     requires spring.web;
     requires org.apache.tomcat.embed.core;
+    requires spring.beans;
 
     opens org.example.proyectofinal to javafx.fxml;
     exports org.example.proyectofinal;

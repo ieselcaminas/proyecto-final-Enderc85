@@ -35,6 +35,14 @@ public class Serie {
     @Column(name = "description", unique = true, length = 500)
     private String description;
 
+    public Serie(String title, Integer year) {
+        this.title = title;
+        this.year = year;
+    }
+
+    public Serie() {
+    }
+
     public Integer getYear() {
         return year;
     }

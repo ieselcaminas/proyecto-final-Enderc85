@@ -18,7 +18,13 @@ public class User {
     @Column(name = "username", unique = true, nullable = false, length = 16)
     private String username;
 
+    public User(String displayName, String username) {
+        this.displayName = displayName;
+        this.username = username;
+    }
 
+    public User() {
+    }
 
     public String getDisplayName() {
         return displayName;

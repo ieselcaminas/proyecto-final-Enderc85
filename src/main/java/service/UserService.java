@@ -1,12 +1,8 @@
 package service;
 
 import entity.User;
-import jakarta.transaction.Transactional;
-import org.springframework.stereotype.Service;
 import repository.UserRepository;
 
-@Transactional
-@Service
 public class UserService {
 
     private final UserRepository userRepository;
@@ -16,30 +12,10 @@ public class UserService {
     }
 
     public User login(String username) {
-        User user = userRepository.findByUsername(username);
-
-        if (user == null) {
-            return null;
-        }
-
-        return user;
+        return userRepository.findByUsername(username);
     }
 
-    public User register(String username) {
-
-        if (username == null || username.isBlank()) {
-            return null;
-        }
-
-        if (userRepository.findByUsername(username) != null) {
-            return null;
-        }
-
-        User user = new User();
-        user.setUsername(username);
-
-
-        return userRepository.save(user);
+    public void register(User user) {
+        userRepository.save(user);
     }
-
 }
