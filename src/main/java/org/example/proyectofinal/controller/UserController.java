@@ -1,8 +1,7 @@
-package controller;
+package org.example.proyectofinal.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import service.UserService;
+import org.example.proyectofinal.service.UserService;
 
 import java.util.Scanner;
 
