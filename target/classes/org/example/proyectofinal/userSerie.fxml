@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.proyectofinal.controller.UserSerieController">
+
+    <center>
+        <TableView fx:id="userSeriesTable">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Título" prefWidth="200"/>
+                <TableColumn fx:id="yearColumn" text="Año" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" padding="10 10 10 10">
+            <Button text="Volver" onAction="#onBack" prefWidth="120"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

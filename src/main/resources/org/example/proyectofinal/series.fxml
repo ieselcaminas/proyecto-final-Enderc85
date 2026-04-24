@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.proyectofinal.controller.SeriesController">
+
+    <center>
+        <TableView fx:id="seriesTable">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Título" prefWidth="150"/>
+                <TableColumn fx:id="descriptionColumn" text="Descripción" prefWidth="250"/>
+                <TableColumn fx:id="yearColumn" text="Año" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="10" padding="10 10 10 10">
+            <HBox spacing="10">
+                <Label text="Título:"/>
+                <TextField fx:id="titleField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Descripción:"/>
+                <TextField fx:id="descriptionField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Año:"/>
+                <TextField fx:id="yearField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Button text="Añadir" onAction="#onAddSerie" prefWidth="120"/>
+                <Button text="Eliminar" onAction="#onDeleteSerie" prefWidth="120"/>
+                <Button text="Volver" onAction="#onBack" prefWidth="120"/>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>
